@@ -11,7 +11,7 @@ services:
       - key: PYTHON_VERSION
         value: 3.12.10
       - key: PEM_SOURCE_DIR
-        value: /var/data/source
+        value: /opt/render/project/src/source
       - key: PEM_DATA_DIR
         value: /var/data/appdata
       - key: PEM_AI_PROVIDER
