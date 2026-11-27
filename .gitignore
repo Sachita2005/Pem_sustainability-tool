@@ -8,3 +8,7 @@ htmlcov/
 
 # Local workbook cache, source-derived assets, and editable deck state.
 data/
+
+# Office lock files
+.~lock.*#
+~$*
