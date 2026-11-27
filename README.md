@@ -33,6 +33,23 @@ workbooks are read; after that the parsed sheets are cached (in `data\cache`) an
 
 Restart the server after changing `.env`.
 
+## Host on Render
+
+The project includes a Render Blueprint in `render.yaml`. Push the code to GitHub, then in Render
+choose **New > Blueprint**, select the repository, and apply the Blueprint. It creates a Python web
+service and a persistent disk mounted at `/var/data`.
+
+The persistent disk keeps workbook caches and app data across deploys. The app expects the source
+files under `/var/data/source` with the same folder structure used locally (`common`, `energy`,
+`water`, `initiatives`, and the other source folders). Copy the source files onto the disk separately;
+they are intentionally not stored in GitHub. Until they are added, `/api/health` reports that the
+source folder is missing and workbook-backed pages cannot show source data.
+
+The Render URL is public and the app currently has no login. Anyone with the URL can use the
+dashboards and API, so only deploy real company data if public access is approved. The Report page
+uses Microsoft PowerPoint for slide pictures on Windows; that rendering is unavailable on Render's
+Linux service, though the rest of the app remains available.
+
 ## What reads what
 
 | Page | Source files |

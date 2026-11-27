@@ -1,0 +1,22 @@
+# Render Blueprint: one web service runs the FastAPI backend and serves the frontend.
+services:
+  - type: web
+    name: pem-sustainability
+    runtime: python
+    plan: starter
+    buildCommand: pip install -r requirements.txt
+    startCommand: cd backend && uvicorn pem.app:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /api/health
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.10
+      - key: PEM_SOURCE_DIR
+        value: /var/data/source
+      - key: PEM_DATA_DIR
+        value: /var/data/appdata
+      - key: PEM_AI_PROVIDER
+        value: local
+    disk:
+      name: pem-sustainability-data
+      mountPath: /var/data
+      sizeGB: 5
