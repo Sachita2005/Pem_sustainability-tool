@@ -1,0 +1,48 @@
+.fam-site-chip { display: inline-flex; flex-direction: column; align-items: flex-start; gap: 1px; text-align: left; }
+.fam-site-chip small { font-size: 11px; opacity: .8; }
+.fam-site-meta { margin: 10px 0 4px; color: var(--text-2); font-size: 13px; display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+.fam-site-meta details { font-size: 12px; }
+.fam-site-meta summary { cursor: pointer; color: var(--text-3); }
+.fam-evidence { margin: 6px 0 0; max-width: 70ch; color: var(--text-2); }
+.fam-table tr.fam-selected td { background: rgba(11, 111, 184, .10); }
+.fam-table tr.fam-selected td:first-child { box-shadow: inset 3px 0 0 var(--brand); }
+.fam-pick { background: none; border: 0; padding: 0; font: inherit; font-weight: 600; color: var(--brand-ink, var(--brand)); cursor: pointer; text-align: left; text-decoration: underline; text-decoration-color: transparent; }
+.fam-pick:hover, .fam-pick:focus-visible { text-decoration-color: currentColor; }
+.fam-unit { color: var(--text-3); font-size: 11.5px; margin-left: 3px; white-space: nowrap; }
+.fam-caution { border: 1px solid var(--warn); border-left-width: 4px; border-radius: 8px; padding: 8px 12px; margin: 8px 0; font-size: 13px; background: var(--surface); }
+.fam-toolbar { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; margin-bottom: 10px; }
+.fam-toolbar label { font-size: 12.5px; color: var(--text-2); }
+.fam-sub { color: var(--text-2); font-size: 12.5px; margin: 6px 0 8px; }
+.fam-block { margin-top: 22px; }
+.fam-about details { margin-top: 18px; }
+.fam-about summary { cursor: pointer; color: var(--text-2); font-size: 13px; }
+.machine-analysis-summary { display: grid; gap: 14px; margin: 10px 0 18px; }
+.machine-analysis-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
+.machine-analysis-card { min-width: 0; padding: 15px 16px; border: 1px solid var(--line); border-top: 4px solid var(--brand); border-radius: 10px; background: var(--surface); box-shadow: var(--shadow); }
+.machine-analysis-card.trend { border-top-color: var(--info); }
+.machine-analysis-card.action { border-top-color: var(--good); }
+.machine-analysis-card.cost { border-top-color: var(--warn); }
+.machine-analysis-label { color: var(--text-2); font-size: 11.5px; font-weight: 700; letter-spacing: .35px; text-transform: uppercase; }
+.machine-analysis-value { margin: 5px 0 3px; color: var(--text); font-size: 20px; font-weight: 700; font-variant-numeric: tabular-nums; }
+.machine-analysis-card p { margin-top: 6px; color: var(--text-2); font-size: 12.5px; }
+.machine-initiative-panel { padding: 16px 18px; border: 1px solid var(--line); border-radius: 12px; background: var(--surface-2); }
+.machine-initiative-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; margin-bottom: 12px; }
+.machine-initiative-head h3 { font-size: 15px; }
+.machine-initiative-head p { margin-top: 2px; color: var(--text-2); font-size: 12px; }
+.machine-initiative-head a { flex: 0 0 auto; font-size: 12.5px; font-weight: 700; }
+.machine-initiative-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 10px; }
+.machine-initiative { min-width: 0; padding: 13px 14px; border: 1px solid var(--line); border-radius: 9px; background: var(--surface); }
+.machine-initiative-top { display: flex; align-items: center; justify-content: space-between; gap: 8px; color: var(--text-3); font-size: 11.5px; }
+.machine-initiative h4 { margin-top: 8px; font-size: 13px; line-height: 1.4; }
+.machine-initiative-facts { display: grid; gap: 4px; margin-top: 9px; color: var(--text-2); font-size: 12px; }
+.machine-initiative > small { display: block; margin-top: 9px; color: var(--text-3); font-size: 10.5px; }
+.machine-action-fallback { margin-top: 12px; padding: 11px 13px; border-left: 4px solid var(--good); border-radius: 7px; background: var(--good-soft); }
+.machine-action-fallback p { margin-top: 3px; font-size: 12.5px; }
+.machine-action-fallback small { display: block; margin-top: 4px; color: var(--text-2); }
+.machine-cost-note { margin-top: 10px; color: var(--text-2); font-size: 12.5px; }
+@media (max-width: 1050px) { .machine-analysis-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 600px) {
+  .fam-site-chip small { display: none; }
+  .machine-analysis-grid { grid-template-columns: minmax(0, 1fr); }
+  .machine-initiative-head { align-items: stretch; flex-direction: column; }
+}

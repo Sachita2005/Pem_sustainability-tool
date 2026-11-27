@@ -1,0 +1,16 @@
+.ma-wrap { min-width: 0; }
+.ma-source { border: 1px solid var(--info); border-left-width: 4px; border-radius: 8px; padding: 9px 12px; margin: 0 0 14px; font-size: 13px; background: var(--surface); color: var(--text-2); }
+.ma-source strong { color: var(--text); }
+.ma-toolbar { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; margin: 0 0 12px; }
+.ma-toolbar label { font-size: 12.5px; color: var(--text-2); font-weight: 700; }
+.ma-hint { color: var(--text-2); font-size: 12.5px; margin: 6px 0 0; }
+.ma-block { margin-top: 22px; }
+.ma-unit { color: var(--text-3); font-size: 11.5px; margin-left: 4px; white-space: nowrap; }
+.ma-muted { color: var(--text-3); }
+.ma-caution { border: 1px solid var(--warn); border-left-width: 4px; border-radius: 8px; padding: 9px 12px; margin: 8px 0 12px; font-size: 13px; background: var(--surface); }
+.ma-sub { margin-top: 18px; min-width: 0; }
+.ma-sub h3 { font-size: 14.5px; margin-bottom: 6px; }
+.ma-charts .ma-chart { min-width: 0; }
+.ma-charts .card-head h3 { font-size: 14.5px; }
+@media (max-width: 1100px) { .ma-charts.grid.cols-3 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 720px) { .ma-charts.grid.cols-3 { grid-template-columns: minmax(0, 1fr); } }

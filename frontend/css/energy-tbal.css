@@ -1,0 +1,63 @@
+/* TBAL HVAC & live meters tab */
+.tb-views { margin: 4px 0 14px; }
+.tb-banner { display: grid; gap: 6px; border-left: 4px solid var(--info); }
+.tb-banner.live { border-left-color: var(--good); }
+.tb-banner.snapshot { border-left-color: var(--warn); }
+.tb-banner.failed { border-left-color: var(--bad); }
+.tb-banner-title { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; font-size: 15px; font-weight: 700; }
+.tb-banner-meta { display: flex; gap: 4px 18px; flex-wrap: wrap; font-size: 12.5px; color: var(--text-2); }
+.tb-banner-meta b { color: var(--text); font-weight: 600; }
+.tb-reason { color: var(--bad); font-size: 13px; font-weight: 600; }
+.tb-toolbar { display: flex; gap: 10px 14px; flex-wrap: wrap; align-items: flex-end; margin: 14px 0 8px; }
+.tb-toolbar .field { min-width: 150px; }
+.tb-toolbar .grow { flex: 1 1 220px; }
+.tb-toolbar .chips { align-self: center; }
+.tb-count { color: var(--text-2); font-size: 12.5px; margin: 4px 0 10px; }
+.tb-group { margin-top: 14px; }
+.tb-group > summary { cursor: pointer; font-weight: 700; padding: 6px 2px; display: flex; gap: 8px; align-items: baseline; flex-wrap: wrap; }
+.tb-group > summary small { color: var(--text-2); font-weight: 400; }
+.tb-pick { background: none; border: 0; padding: 0; font: inherit; font-weight: 600; color: var(--brand-ink, var(--brand)); cursor: pointer; text-align: left; text-decoration: underline; text-decoration-color: transparent; }
+.tb-pick:hover, .tb-pick:focus-visible { text-decoration-color: currentColor; }
+.tb-inf { color: var(--text-3); font-size: 11px; margin-left: 4px; white-space: nowrap; }
+.tb-dl { display: grid; grid-template-columns: minmax(130px, 200px) minmax(0, 1fr); gap: 6px 14px; font-size: 13px; }
+.tb-dl dt { color: var(--text-2); font-weight: 600; }
+.tb-dl dd { margin: 0; overflow-wrap: anywhere; }
+.tb-warnline { margin: 8px 0; padding: 7px 10px; border-radius: 8px; background: var(--warn-soft); color: var(--warn); font-size: 12.5px; }
+.tb-inputs { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 14px; }
+.tb-field { display: flex; flex-direction: column; gap: 4px; font-size: 12px; font-weight: 700; color: var(--text-2); }
+.tb-field .input { width: 100%; font-weight: 400; }
+.tb-field .input[aria-invalid="true"] { border-color: var(--bad); }
+.tb-hint { font-weight: 400; color: var(--text-3); font-size: 11.5px; line-height: 1.35; }
+.tb-err { font-weight: 600; color: var(--bad); font-size: 12.5px; }
+.tb-callout { border: 1px solid var(--warn); border-left-width: 4px; border-radius: 8px; padding: 10px 14px; background: var(--surface); font-size: 13px; }
+.tb-callout ul { margin: 6px 0 0 18px; padding: 0; }
+.tb-callout li { margin: 3px 0; }
+.tb-caution { border: 2px dashed var(--warn); border-radius: 10px; padding: 12px 14px; background: var(--warn-soft); color: var(--text); }
+.tb-caution strong { color: var(--warn); }
+.tb-caution p { margin: 4px 0 0; font-size: 13px; }
+.tb-hatch .table-wrap { border: 2px dashed var(--warn); }
+.tb-busy { opacity: .55; transition: opacity .15s; }
+.tb-actions { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+.tb-pre { white-space: pre-wrap; font-size: 12.5px; color: var(--text-2); margin: 8px 0 0; }
+.tb-sub { color: var(--text-2); font-size: 12.5px; margin: 4px 0 8px; }
+.tb-block { margin-top: 22px; }
+.tb-unit-analysis { margin-top: 16px; padding: 14px; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); }
+.tb-unit-analysis h3 { font-size: 15px; }
+.tb-unit-matrix-title { margin: 14px 0 4px; font-size: 13px; }
+.tb-unit-matrix-wrap { max-width: 100%; overflow: auto; }
+.tb-unit-matrix { min-width: max-content; }
+.tb-unit-matrix thead { position: sticky; top: 0; z-index: 1; background: var(--surface); }
+.tb-unit-matrix tbody th { position: sticky; left: 0; z-index: 1; text-align: left; background: var(--surface); }
+.tb-unit-matrix th, .tb-unit-matrix td { min-width: 118px; }
+.tb-compare-higher { color: var(--bad); }
+.tb-compare-lower { color: var(--good); }
+@media (max-width: 600px) {
+  .tb-dl { grid-template-columns: 1fr; gap: 0; }
+  .tb-dl dt { margin-top: 8px; }
+  .tb-toolbar .field { min-width: 0; flex: 1 1 140px; }
+  .tb-unit-analysis { padding: 10px; }
+}
+.tb-toolbar .field > * { max-width: 100%; }
+.tb-toolbar select.input, .tb-toolbar input.input { width: 100%; min-width: 0; }
+.tb-toolbar .field > div { min-width: 0; }
+@media (max-width: 600px) { .tb-toolbar .field { flex: 1 1 100%; } }

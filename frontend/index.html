@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PEM Sustainability Tool</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230284c7'/%3E%3Cpath d='M9 22c0-7 5-12 14-12-1 9-6 13-12 13l-3 3' fill='none' stroke='%23fff' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="/static/css/app.css">
+  <script src="/static/vendor/chart.umd.min.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="logo-box" href="#/home" title="Home"><b>TATA</b> ADVANCED SYSTEMS</a>
+    <span class="app-title">PEM Sustainability Tool</span>
+
+    <nav class="nav" id="nav" aria-label="Sections">
+      <a href="#/home" data-page="home">Home</a>
+      <a href="#/metrics" data-page="metrics">Metrics</a>
+      <a href="#/initiatives" data-page="initiatives">Initiatives</a>
+      <a href="#/report" data-page="report">Report</a>
+      <a href="#/milestones" data-page="milestones">Milestones</a>
+    </nav>
+
+    <div class="topbar-tools">
+      <button type="button" class="status-dot" id="data-status" title="Checking data…" aria-label="Data sources"></button>
+      <span class="clock" id="clock" aria-label="Current time, India"></span>
+      <button type="button" class="theme-btn" id="theme-toggle" title="Switch between light and dark"><span aria-hidden="true">☀</span> Theme</button>
+    </div>
+  </header>
+
+  <main id="view" class="view" tabindex="-1"></main>
+
+  <div id="toast-host" class="toast-host" aria-live="polite"></div>
+  <div id="modal-host"></div>
+
+  <script type="module" src="/static/js/app.js"></script>
+</body>
+</html>

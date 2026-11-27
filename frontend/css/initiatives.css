@@ -1,0 +1,111 @@
+/* Initiatives page. Colours come from the tokens in app.css so light and dark stay in step. */
+
+.ini-plantbar-wrap { position: relative; }
+.ini-view-bar { margin-bottom: 8px; }
+.ini-view-bar .sub-tab { font-size: 14px; padding: 8px 18px; }
+.ini-view-hint { margin-left: auto; font-size: 12px; color: var(--text-3); }
+.ini-head { margin-top: 4px; }
+
+.ini-slow { margin-left: 8px; color: var(--text-3); font-size: 12.5px; }
+
+/* KPI rows */
+.ini-kpis { margin-top: 4px; }
+.ini-kpis + .ini-kpis { margin-top: 14px; }
+.ini-kpis .mcard-value { font-size: 22px; }
+.ini-kpi-src { margin-top: 6px; font-size: 11.5px; color: var(--text-3); line-height: 1.35; }
+.ini-block-title { margin: 16px 2px 8px; font-size: 13px; font-weight: 700; color: var(--text-2); text-transform: uppercase; letter-spacing: 0.4px; }
+
+/* Status badges: text always present; the colour is secondary */
+.ini-st { display: inline-flex; align-items: center; gap: 5px; padding: 2px 9px; border-radius: 999px; font-size: 11.5px; font-weight: 700; border: 1px solid transparent; white-space: nowrap; background: var(--surface-2); color: var(--text-2); border-color: var(--line); }
+.ini-st .pl { font-weight: 700; opacity: 0.85; }
+.ini-st.st-implemented { background: var(--good-soft); color: var(--good); border-color: transparent; }
+.ini-st.st-horizontally_deployed { background: var(--brand-soft); color: var(--c6); border-color: transparent; }
+.ini-st.st-in_progress { background: var(--brand-soft); color: var(--brand-ink); border-color: transparent; }
+.ini-st.st-open { background: var(--warn-soft); color: var(--warn); border-color: transparent; }
+.ini-st.st-under_study { background: var(--info-soft); color: var(--info); border-color: transparent; }
+.ini-st.st-not_feasible { background: var(--bad-soft); color: var(--bad); border-color: transparent; }
+.ini-st.st-on_hold { background: var(--warn-soft); color: var(--c8); border-color: transparent; }
+.ini-st.st-none { background: transparent; color: var(--text-3); border: 1px dashed var(--line-strong); }
+.ini-st.sel { box-shadow: 0 0 0 2px var(--brand); }
+.ini-sts { display: flex; flex-wrap: wrap; gap: 4px; }
+
+/* Caution markers */
+.ini-flag { display: inline-flex; align-items: center; gap: 4px; padding: 1px 8px; border-radius: 6px; font-size: 11px; font-weight: 700; background: var(--warn-soft); color: var(--warn); cursor: help; white-space: nowrap; }
+.ini-flag.info { background: var(--info-soft); color: var(--info); }
+.ini-flags { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 5px; }
+
+/* Register */
+.ini-filters { display: flex; flex-wrap: wrap; gap: 10px 14px; align-items: flex-end; margin-bottom: 10px; }
+.ini-filters .field { min-width: 150px; }
+.ini-filters .field.grow { flex: 1; min-width: 200px; }
+.ini-count { margin: 0 0 8px; font-size: 12.5px; color: var(--text-2); }
+.ini-desc { background: none; border: 0; padding: 0; text-align: left; color: var(--brand-ink); font-weight: 700; cursor: pointer; font-size: 13px; line-height: 1.35; }
+.ini-desc:hover { text-decoration: underline; }
+table.ini-table td { min-width: 0; }
+table.ini-table td.d { min-width: 260px; max-width: 420px; }
+table.ini-table td.s { min-width: 190px; }
+.ini-dash { color: var(--text-3); }
+.ini-sub { display: block; color: var(--text-3); font-size: 11.5px; margin-top: 2px; }
+
+/* Detail dialog */
+.ini-dl { display: grid; grid-template-columns: minmax(130px, 200px) minmax(0, 1fr); gap: 6px 14px; margin: 0; font-size: 13px; }
+.ini-dl dt { color: var(--text-2); font-weight: 700; }
+.ini-dl dd { margin: 0; overflow-wrap: anywhere; }
+.ini-dsec { margin-top: 16px; }
+.ini-dsec h4 { font-size: 13px; text-transform: uppercase; letter-spacing: 0.4px; color: var(--text-2); margin-bottom: 8px; }
+.ini-caution { margin-top: 8px; padding: 8px 12px; border-radius: var(--radius-sm); background: var(--warn-soft); color: var(--text); border-left: 4px solid var(--warn); font-size: 12.5px; }
+.ini-caution strong { color: var(--warn); }
+.ini-linked button { display: block; background: none; border: 0; padding: 2px 0; text-align: left; color: var(--brand-ink); cursor: pointer; font-size: 13px; }
+.ini-linked button:hover { text-decoration: underline; }
+@media (max-width: 560px) { .ini-dl { grid-template-columns: minmax(0, 1fr); gap: 0; } .ini-dl dd { margin-bottom: 8px; } }
+
+/* AI block */
+.ini-provider { display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: center; padding: 14px 18px; border-radius: var(--radius); border: 1px solid var(--brand); background: var(--brand-soft); }
+.ini-provider .pv-label { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.4px; color: var(--text-2); }
+.ini-provider .pv-name { font-size: 18px; font-weight: 700; color: var(--text); }
+.ini-provider .pv-desc { flex-basis: 100%; color: var(--text-2); font-size: 13px; }
+.ini-how { margin-top: 10px; }
+.ini-how summary { cursor: pointer; font-weight: 700; color: var(--brand-ink); }
+.ini-how .ini-dl { margin-top: 10px; }
+.ini-tiles { margin-top: 14px; }
+.ini-tile { border-left: 5px solid var(--line-strong); }
+.ini-tile.red { border-left-color: var(--bad); } .ini-tile.red .mcard-value { color: var(--bad); }
+.ini-tile.amber { border-left-color: var(--warn); } .ini-tile.amber .mcard-value { color: var(--warn); }
+.ini-tile.check { border-left-color: var(--info); border-left-style: dashed; } .ini-tile.check .mcard-value { color: var(--info); }
+.ini-bymetric { margin-top: 12px; }
+.ini-bymetric table { font-size: 13px; }
+
+.ini-finds { display: grid; gap: 16px; margin-top: 14px; }
+.ini-find { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.35fr); gap: 20px; padding: 18px 20px; border-left: 6px solid var(--bad); }
+.ini-find.amber { border-left-color: var(--warn); }
+.ini-find.check { border-left: 6px dashed var(--info); background: var(--surface-2); }
+@media (max-width: 1000px) { .ini-find { grid-template-columns: minmax(0, 1fr); padding: 14px; } }
+.ini-find h3 { font-size: 16px; margin: 8px 0 4px; }
+.ini-find-tags { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.sev { display: inline-flex; align-items: center; gap: 6px; padding: 3px 11px; border-radius: 999px; font-size: 12px; font-weight: 700; }
+.sev.red { background: var(--bad-soft); color: var(--bad); }
+.sev.amber { background: var(--warn-soft); color: var(--warn); }
+.sev.check { background: var(--info-soft); color: var(--info); border: 1px dashed var(--info); }
+.ini-evidence { margin: 8px 0 10px; line-height: 1.5; }
+.ini-facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 8px; margin: 10px 0; }
+.ini-fact { padding: 8px 10px; border-radius: var(--radius-sm); background: var(--surface-2); border: 1px solid var(--line); }
+.ini-find.check .ini-fact { background: var(--surface); }
+.ini-fact b { display: block; font-size: 11px; text-transform: uppercase; letter-spacing: 0.3px; color: var(--text-2); }
+.ini-fact span { font-size: 15px; font-weight: 700; font-variant-numeric: tabular-nums; }
+.ini-fact span small { font-weight: 400; color: var(--text-2); margin-left: 3px; font-size: 12px; }
+.ini-fact.save { background: var(--good-soft); border-color: transparent; } .ini-fact.save span { color: var(--good); }
+.ini-actions h4 { font-size: 13px; margin: 12px 0 2px; }
+.ini-actions .gen { font-size: 12px; color: var(--text-3); margin-bottom: 4px; }
+.ini-actions ol { margin: 4px 0 0 18px; padding: 0; }
+.ini-actions li { margin: 4px 0; }
+.ini-related { margin-top: 10px; padding: 10px 12px; border-radius: var(--radius-sm); border: 1px solid var(--good); background: var(--good-soft); font-size: 13px; }
+.ini-related h4 { font-size: 13px; margin-bottom: 4px; color: var(--good); }
+.ini-related ul { margin: 0 0 0 16px; padding: 0; }
+.ini-chartbox h4 { font-size: 13.5px; }
+.ini-chartbox .cap { font-size: 12px; color: var(--text-2); margin: 2px 0 8px; }
+.ini-chartbox .chart { height: 330px; }
+@media (max-width: 720px) { .ini-chartbox .chart { height: 290px; } }
+.ini-chartnote { margin-top: 6px; font-size: 12px; color: var(--text-2); }
+.ini-ai-note { margin: 4px 0 8px; font-size: 12.5px; color: var(--text-2); }
+.ini-doubt { color: var(--warn); font-weight: 700; }
+table.ini-table td:nth-child(2) { min-width: 130px; }

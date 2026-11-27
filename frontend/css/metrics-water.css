@@ -1,0 +1,69 @@
+/* Metrics > Water view. Uses the shared design tokens only, so light and dark both work. */
+.mw-root { min-width: 0; }
+.mw-bar { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin: 18px 0 14px; }
+.mw-bar-tools { margin-left: auto; display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--text-2); }
+.mw-bar-tools label { font-weight: 700; }
+.mw-note-line { margin-top: 10px; padding: 9px 12px; border-radius: var(--radius-sm); background: var(--info-soft); color: var(--text); font-size: 12.5px; border: 1px solid var(--line); }
+.mw-note-line strong { color: var(--info); }
+.mw-pos { color: var(--bad); } .mw-neg { color: var(--good); }
+.mw-sub-strong { color: var(--text-2); font-weight: 700; }
+
+.mw-grid2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; margin-top: 14px; }
+.mw-grid2 > * { min-width: 0; }
+@media (max-width: 900px) { .mw-grid2 { grid-template-columns: minmax(0, 1fr); } }
+.mw-stack > * + * { margin-top: 14px; }
+
+/* data markers */
+.mw-mark { color: var(--warn); font-weight: 700; cursor: help; margin-left: 2px; }
+.mw-mark.over { color: var(--info); }
+.mw-over { color: var(--info); font-weight: 700; }
+.mw-legend { font-size: 12px; color: var(--text-2); margin-top: 8px; }
+.mw-legend .mw-mark { margin: 0 2px 0 0; }
+
+/* flagged box */
+.mw-flags { margin-top: 18px; border: 1px solid var(--warn); background: var(--warn-soft); border-radius: var(--radius); padding: 10px 14px; color: var(--text); }
+.mw-flags > summary { cursor: pointer; font-weight: 700; color: var(--warn); }
+.mw-flags ul { margin: 8px 0 0 18px; padding: 0; font-size: 13px; }
+.mw-flags li { margin: 4px 0; }
+.mw-flags details { display: inline; }
+.mw-flags details summary { display: inline; cursor: pointer; color: var(--brand-ink); font-size: 12.5px; }
+.mw-flags .mw-months { display: block; margin-top: 3px; color: var(--text-2); font-size: 12.5px; }
+
+/* flow meters */
+.mw-legend-row { display: flex; flex-wrap: wrap; gap: 14px; font-size: 12.5px; color: var(--text-2); margin: 6px 0 12px; align-items: center; }
+.mw-legend-row span { display: inline-flex; align-items: center; gap: 6px; }
+.mw-group { margin-top: 12px; }
+.mw-group h4 { font-size: 13.5px; display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; }
+.mw-group h4 .mw-count { font-size: 18px; font-variant-numeric: tabular-nums; }
+.mw-tiles { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
+.mw-tile {
+  width: 28px; height: 28px; display: inline-grid; place-items: center; font-size: 11px; font-weight: 700; line-height: 1;
+  border: 2px solid var(--good); background: var(--good-soft); color: var(--good); border-radius: 6px;
+}
+.mw-tile.analog { border-radius: 50%; }
+.mw-tile.unspecified { border-radius: 50%; border-style: dotted; }
+.mw-tile.tbi { border-color: var(--warn); border-style: dashed; background: transparent; color: var(--warn); }
+.mw-tile.avail { background: var(--good); color: var(--surface); }
+.mw-dl { display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: 6px 14px; margin: 14px 0 0; font-size: 13px; }
+.mw-dl dt { color: var(--text-2); font-weight: 700; }
+.mw-dl dd { margin: 0; overflow-wrap: anywhere; }
+.mw-strip { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
+@media (max-width: 1100px) { .mw-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 520px) { .mw-strip { grid-template-columns: minmax(0, 1fr); } }
+.mw-pcard { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px; min-width: 0; }
+.mw-pcard.sel { border-color: var(--brand); box-shadow: 0 0 0 3px var(--brand-soft); }
+.mw-pcard.none { border-style: dashed; background: var(--surface-2); }
+.mw-phead { display: flex; justify-content: space-between; gap: 8px; align-items: flex-start; }
+.mw-phead strong { font-size: 14.5px; }
+.mw-phead small { display: block; color: var(--text-3); font-size: 11.5px; }
+.mw-pnum { margin-top: 8px; font-size: 13px; color: var(--text-2); }
+.mw-pnum b { font-size: 18px; color: var(--text); font-variant-numeric: tabular-nums; }
+.mw-statbar { display: flex; height: 10px; border-radius: 999px; overflow: hidden; background: var(--line); margin-top: 8px; }
+.mw-statbar i { display: block; height: 100%; }
+.mw-statbar .a { background: var(--good); }
+.mw-statbar .t { background: repeating-linear-gradient(45deg, var(--warn), var(--warn) 4px, var(--warn-soft) 4px, var(--warn-soft) 7px); }
+.mw-ptypes { margin-top: 6px; font-size: 12px; color: var(--text-3); }
+.mw-kv { display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: 5px 14px; font-size: 13px; margin: 0; }
+.mw-kv dt { color: var(--text-2); font-weight: 700; } .mw-kv dd { margin: 0; overflow-wrap: anywhere; }
+.mw-unit { color: var(--text-3); font-size: 11px; margin-left: 3px; font-weight: 400; }
+@media (max-width: 520px) { .mw-dl, .mw-kv { grid-template-columns: minmax(0, 1fr); gap: 0; } .mw-dl dd, .mw-kv dd { margin-bottom: 6px; } }
